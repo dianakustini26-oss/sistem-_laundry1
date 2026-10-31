@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaundryIn - Pemesanan Laundry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>LaundryIn</h2>
+
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#pemesanan">Pemesanan</a>
+            <a href="#data">Data Pesanan</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="beranda">
+
+        <div class="hero-content">
+            <h1>Laundry Bersih, Hidup Lebih Praktis!</h1>
+
+            <p>
+                Tidak perlu repot mencuci sendiri.
+                Serahkan cucianmu kepada LaundryIn.
+                Bersih, wangi, dan praktis.
+            </p>
+
+            <a href="#pemesanan" class="btn">
+                Pesan Sekarang
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="Laundry.jpeg" alt="Laundry">
+        </div>
+
+    </section>
+
+    <section class="layanan" id="layanan">
+
+        <h2>Layanan Kami</h2>
+        <p class="subjudul">Pilih layanan sesuai kebutuhanmu.</p>
+
+        <div class="layanan-container">
+
+            <div class="layanan-card">
+                <h3>Reguler</h3>
+                <p>Rp20.000 / kg</p>
+                <span>Layanan cuci biasa.</span>
+            </div>
+
+            <div class="layanan-card">
+                <h3>Express</h3>
+                <p>Rp30.000 / kg</p>
+                <span>Layanan lebih cepat.</span>
+            </div>
+
+            <div class="layanan-card">
+                <h3>Cuci Kering</h3>
+                <p>Rp10.000 / kg</p>
+                <span>Cucian tanpa proses setrika.</span>
+            </div>
+
+            <div class="layanan-card">
+                <h3>Setrika</h3>
+                <p>Rp15.000 / kg</p>
+                <span>Layanan khusus setrika.</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FORM PEMESANAN -->
+    <section class="pemesanan" id="pemesanan">
+
+        <h2>Form Pemesanan Laundry</h2>
+        <p class="subjudul">
+            Silakan isi data pemesanan di bawah ini.
+        </p>
+
+        <form id="formPemesanan">
+
+            <div class="form-group">
+                <label for="nama">Nama Pelanggan</label>
+                <input type="text" id="nama"
+                    placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hp">Nomor HP</label>
+                <input type="tel" id="hp"
+                    placeholder="Masukkan nomor HP" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jenisLayanan">Jenis Layanan</label>
+
+                <select id="jenisLayanan" required>
+                    <option value="">Pilih layanan</option>
+                    <option value="Reguler">Reguler</option>
+                    <option value="Express">Express</option>
+                    <option value="Cuci Kering">Cuci Kering</option>
+                    <option value="Setrika">Setrika</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="berat">Berat Cucian (kg)</label>
+                <input type="number" id="berat"
+                    placeholder="Contoh: 3"
+                    min="0.1" step="0.1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal Masuk</label>
+                <input type="date" id="tanggal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="totalHarga">Total Harga</label>
+                <input type="text" id="totalHarga"
+                    placeholder="Harga dihitung otomatis" readonly>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                Pesan Laundry
+            </button>
+
+        </form>
+    </section>
+
+    <!-- DATA PEMESANAN -->
+    <section class="data-pemesanan" id="data">
+
+        <h2>Data Pemesanan Laundry</h2>
+        <p class="subjudul">
+            Berikut daftar pesanan yang berhasil ditambahkan.
+        </p>
+
+        <div class="table-container">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>No. HP</th>
+                        <th>Layanan</th>
+                        <th>Berat</th>
+                        <th>Total Harga</th>
+                        <th>Tanggal</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelPemesanan">
+                    <tr>
+                        <td colspan="9" class="kosong">
+                            Belum ada pemesanan laundry.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 LaundryIn | Layanan Laundry Dian Praktis dan Terpercaya</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
